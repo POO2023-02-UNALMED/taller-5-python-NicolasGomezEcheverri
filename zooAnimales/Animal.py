@@ -1,8 +1,8 @@
-from zooAnimales.Mamifero import cantidadMamiferos
-from zooAnimales.Ave import cantidadAves
-from zooAnimales.Reptil import cantidadReptiles 
-from zooAnimales.Pez import cantidadPeces
-from zooAnimales.Anfibio import cantidadAnfibios
+from zooAnimales.mamifero import cantidadMamiferos
+from zooAnimales.ave import cantidadAves
+from zooAnimales.reptil import cantidadReptiles 
+from zooAnimales.pez import cantidadPeces
+from zooAnimales.anfibio import cantidadAnfibios
 
 class Animal:
     _totalAnimales = 0
