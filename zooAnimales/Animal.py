@@ -49,7 +49,7 @@ class Animal:
 
     @classmethod
     def totalPorTipo(cls):
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" + "Aves: " + Ave.cantidadAves() + "\n" + "Reptiles: " + Reptil.cantidadReptiles() + "\n" + "Peces: " + Pez.cantidadPeces() + "\n" + "Anfibios: " + Anfibio.cantidadAnfibios()
+        return "Mamiferos: " + str(cantidadMamiferos()) + "\n" + "Aves: " + str(cantidadAves()) + "\n" + "Reptiles: " + str(cantidadReptiles()) + "\n" + "Peces: " + str(cantidadPeces()) + "\n" + "Anfibios: " + str(cantidadAnfibios())
 
     def toString(self):
         if self._zona != None:
