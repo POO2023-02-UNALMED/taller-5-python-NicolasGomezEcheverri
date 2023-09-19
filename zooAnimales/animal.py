@@ -51,12 +51,13 @@ class Animal:
 
         return "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\n" + "Aves: " + str(Ave.cantidadAves()) + "\n" + "Reptiles: " + str(Reptil.cantidadReptiles()) + "\n" + "Peces: " + str(Pez.cantidadPeces()) + "\n" + "Anfibios: " + str(Anfibio.cantidadAnfibios())
 
-def toString(self):
-    from gestion.zona import Zona
-    from gestion.zoologico import Zoologico
+    @classmethod
+    def toString(self):
+        from gestion.zona import Zona
+        from gestion.zoologico import Zoologico
     
-    if len(self._zona) != 0:
-        return (f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero} la zona en la que me ubico es {self._zona[0]}, en el {self._zona[0].getZoo().getNombre()}")
+        if len(self._zona) != 0:
+            return (f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero} la zona en la que me ubico es {self._zona[0]}, en el {self._zona[0].getZoo().getNombre()}")
 
-    else:
-        return (f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}")
+        else:
+            return (f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}")
