@@ -1,11 +1,12 @@
 from .animal import Animal
 
 class Ave(Animal):
-    _listado = []
-    aguilas = 0
-    halcones = 0
 
-    def __init__(self, nombre=None, edad=None, habitat=None, genero=None, colorPlumas=None):
+    _listado = []
+    halcones = 0
+    aguilas = 0
+
+    def __init__(self, nombre, edad, habitat, genero, colorPlumas):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
         Ave._listado.append(self)
@@ -13,22 +14,41 @@ class Ave(Animal):
     def getColorPlumas(self):
         return self._colorPlumas
     
-    def setColorPlumas(self, colorPlumas):
-        self._colorPlumas = colorPlumas
+    def setColorPlumas(self, color):
+        self._colorPlumas = color
+
+    @classmethod
+    def getListado(cls):
+        return Ave._listado
     
     @classmethod
-    def cantidadAves(cls):
-        return len(cls._listado)
+    def setListado(cls, listado):
+        Ave._listado = listado
+
+    @classmethod
+    def getHalcones(cls):
+        return Ave.halcones
     
+    @classmethod
+    def setHalcones(cls, listado):
+        Ave.halcones = listado
+
+    @classmethod
+    def getAguilas(cls, listado):
+        Ave.aguilas = listado
+
+    @classmethod
+    def setRanas(cls, listado):
+        Ave.aguilas = listado
+
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
+        Halcon = Ave(nombre, edad, "montanas", genero, "cafe glorioso")
         Ave.halcones += 1
-        return Ave(nombre, edad, genero, "montanas", "cafe glorioso")
+        return Halcon
     
     @classmethod
     def crearAguila(cls, nombre, edad, genero):
+        Aguila = Ave(nombre, edad, "montanas", genero, "blanco y amarillo")
         Ave.aguilas += 1
-        return Ave(nombre, edad, genero, "montanas", "blanco y amarillo")
-    
-    def movimiento(self):
-        return "volar"
+        return Aguila
