@@ -57,7 +57,6 @@ class Animal:
 
         return (f"Mamiferos : {totalmamiferos}\nAves : {totalaves}\nReptiles : {totalreptiles}\nPeces : {totalpeces}\nAnfibios : {totalanfibios}")
     
-    @classmethod
     def toString(self):
         if len(self._zona) != 0:
             return (f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero} la zona en la que me ubico es {self._zona[0]}, en el {self._zona[0].getZoo().getNombre()}")
