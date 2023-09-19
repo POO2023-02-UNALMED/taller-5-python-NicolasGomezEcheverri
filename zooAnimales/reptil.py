@@ -29,12 +29,12 @@ class Reptil(Animal):
     
     @classmethod
     def crearIguana(cls, nombre, edad, genero):
-        iguanas += 1
+        Reptil.iguanas += 1
         return Reptil(nombre, edad, "humedal", genero, "verde", 3)
     
     @classmethod
     def crearSerpiente(cls, nombre, edad, genero):
-        serpientes += 1
+        Reptil.serpientes += 1
         return Reptil(nombre, edad, "jungla", genero, "blanco", 1)
     
     def movimiento(self):

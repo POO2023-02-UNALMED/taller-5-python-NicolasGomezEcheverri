@@ -29,12 +29,12 @@ class Anfibio(Animal):
     
     @classmethod
     def crearRana(cls, nombre, edad, genero):
-        ranas += 1
+        Anfibio.ranas += 1
         return Anfibio(nombre, edad, "selva", genero, "rojo", True)
     
     @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
-        salamandras += 1
+        Anfibio.salamandras += 1
         return Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
 
     def movimiento(self):

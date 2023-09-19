@@ -22,12 +22,12 @@ class Ave(Animal):
     
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
-        halcones += 1
+        Ave.halcones += 1
         return Ave(nombre, edad, genero, "montanas", "cafe glorioso")
     
     @classmethod
     def crearAguila(cls, nombre, edad, genero):
-        aguilas += 1
+        Ave.aguilas += 1
         return Ave(nombre, edad, genero, "montanas", "blanco y amarillo")
     
     def movimiento(self):
